@@ -123,6 +123,55 @@ print → exibe o valor sem adicionar uma quebra de linha
 
 ---
 
+# Método p
+
+O método `p` é parecido com o `puts`, mas existe uma diferença importante.
+
+Enquanto o `puts` exibe o conteúdo de uma forma mais "limpa", o `p` exibe a **representação do objeto**, mostrando caracteres especiais de forma explícita.
+
+Isso é especialmente útil para **debug**, pois permite verificar melhor o conteúdo de variáveis e identificar possíveis problemas.
+
+### Exemplo
+
+Com `puts`:
+
+```ruby
+puts "Exemplo de \n saída"
+```
+
+**Saída:**
+
+```text
+Exemplo de
+ saída
+```
+
+Com `p`:
+
+```ruby
+p "Exemplo de \n saída"
+```
+
+**Saída:**
+
+```text
+"Exemplo de \n saída"
+```
+
+Perceba que o `p` mostra:
+
+- As aspas da String;
+- O `\n` em vez de executar a quebra de linha.
+
+### Resumo
+
+```text
+puts → exibe o conteúdo de forma mais limpa
+p    → exibe a representação do objeto, sendo útil para debug
+```
+
+---
+
 # Escape Characters
 
 **Escape Characters** são caracteres especiais utilizados dentro de Strings para representar determinados comportamentos.
@@ -135,7 +184,6 @@ Alguns dos principais são:
 | `\t` | Tabulação |
 | `\"` | Aspas duplas dentro de uma String |
 | `\'` | Aspas simples dentro de uma String |
-| `\\` | Barra invertida |
 
 ---
 
@@ -232,6 +280,22 @@ String "de" exemplo
 
 ---
 
+## `\'` — Aspas simples
+
+O `\'` pode ser utilizado para inserir uma aspa simples dentro de uma String que também utiliza aspas simples como delimitador.
+
+```ruby
+puts 'String \'de\' exemplo'
+```
+
+**Saída:**
+
+```text
+String 'de' exemplo
+```
+
+---
+
 ## Resumo dos Escape Characters
 
 ```text
@@ -239,3 +303,152 @@ String "de" exemplo
 \t  → tabulação
 \"  → aspas duplas
 \'  → aspas simples
+```
+
+---
+
+# Operadores Aritméticos
+
+Os operadores aritméticos do Ruby seguem um padrão semelhante ao de outras linguagens de programação.
+
+| Operador | Função |
+|---|---|
+| `+` | Soma |
+| `-` | Subtração |
+| `*` | Multiplicação |
+| `/` | Divisão |
+| `%` | Resto da divisão |
+
+### Soma
+
+```ruby
+puts 10 + 5
+```
+
+**Saída:**
+
+```text
+15
+```
+
+### Subtração
+
+```ruby
+puts 10 - 5
+```
+
+**Saída:**
+
+```text
+5
+```
+
+### Multiplicação
+
+```ruby
+puts 10 * 5
+```
+
+**Saída:**
+
+```text
+50
+```
+
+### Divisão
+
+Na divisão, quando os dois números são inteiros (`Integer`), o resultado também será inteiro.
+
+```ruby
+puts 12 / 5
+```
+
+**Saída:**
+
+```text
+2
+```
+
+Isso acontece porque a divisão entre dois `Integer` descarta a parte decimal.
+
+Para obter um resultado com casas decimais, pelo menos um dos números precisa ser um `Float`.
+
+```ruby
+puts 12.0 / 5
+```
+
+**Saída:**
+
+```text
+2.4
+```
+
+Também funcionaria invertendo:
+
+```ruby
+puts 12 / 5.0
+```
+
+**Saída:**
+
+```text
+2.4
+```
+
+### Resto da divisão
+
+O operador `%` retorna o **resto de uma divisão**.
+
+```ruby
+puts 12 % 5
+```
+
+**Saída:**
+
+```text
+2
+```
+
+---
+
+# Concatenação
+
+Concatenação é o processo de **juntar Strings**.
+
+No Ruby, podemos utilizar o operador `+` para concatenar Strings, de forma semelhante ao JavaScript.
+
+### Exemplo
+
+```ruby
+puts "Felipe" + " Néspolo"
+```
+
+**Saída:**
+
+```text
+Felipe Néspolo
+```
+
+O espaço entre os nomes foi colocado manualmente dentro da segunda String:
+
+```ruby
+" Néspolo"
+```
+
+Se não colocássemos o espaço:
+
+```ruby
+puts "Felipe" + "Néspolo"
+```
+
+**Saída:**
+
+```text
+FelipeNéspolo
+```
+
+### Resumo
+
+```text
+"Olá " + "Mundo" → "Olá Mundo"
+```
