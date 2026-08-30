@@ -452,3 +452,465 @@ FelipeNéspolo
 ```text
 "Olá " + "Mundo" → "Olá Mundo"
 ```
+
+# Variáveis
+
+Para declarar uma variável em Ruby, basta definir um nome e atribuir um valor utilizando o operador `=`.
+
+```ruby
+nome = "Felipe"
+```
+
+A sintaxe é semelhante à do Python, pois não é necessário informar o tipo da variável antes de atribuir um valor.
+
+Em linguagens como Java e C++, normalmente precisamos declarar o tipo:
+
+```java
+String nome = "Felipe";
+int idade = 20;
+```
+
+No Ruby, podemos simplesmente fazer:
+
+```ruby
+nome = "Felipe"
+idade = 20
+```
+
+O Ruby identifica automaticamente o tipo do valor atribuído.
+
+---
+
+## Convenção para nomes de variáveis
+
+Uma convenção muito utilizada pela comunidade Ruby é o **snake_case**.
+
+Nesse padrão, quando o nome possui mais de uma palavra, utilizamos `_` para separá-las.
+
+### Exemplo
+
+```ruby
+nome_do_pais = "Brasil"
+```
+
+Outros exemplos:
+
+```ruby
+idade_usuario = 20
+nome_completo = "Felipe Néspolo"
+idade_em_dez_anos = 30
+```
+
+---
+
+## Exemplos
+
+### Armazenando uma idade
+
+```ruby
+idade = 20
+
+puts idade
+```
+
+**Saída:**
+
+```text
+20
+```
+
+### Armazenando um nome
+
+```ruby
+nome = "Felipe"
+
+puts nome
+```
+
+**Saída:**
+
+```text
+Felipe
+```
+
+---
+
+## Concatenando variáveis
+
+É possível utilizar duas ou mais variáveis para formar uma String.
+
+Podemos utilizar o operador `+` para concatenar os valores.
+
+```ruby
+nome = "Felipe"
+sobrenome = "Néspolo"
+
+puts nome + sobrenome
+```
+
+**Saída:**
+
+```text
+FelipeNéspolo
+```
+
+Perceba que os valores ficam **colados**, pois não existe um espaço entre as duas Strings.
+
+Para adicionar um espaço, podemos colocá-lo manualmente:
+
+```ruby
+puts nome + " " + sobrenome
+```
+
+**Saída:**
+
+```text
+Felipe Néspolo
+```
+
+---
+
+## Operações com variáveis
+
+É possível realizar operações utilizando variáveis.
+
+```ruby
+idade = 20
+
+idade_em_dez_anos = idade + 10
+
+puts idade_em_dez_anos
+```
+
+**Saída:**
+
+```text
+30
+```
+
+Nesse caso, o valor de `idade` foi utilizado para realizar uma soma e o resultado foi armazenado em `idade_em_dez_anos`.
+
+---
+
+## Alterando o valor de uma variável
+
+Uma variável pode receber um novo valor depois de ter sido criada.
+
+```ruby
+exemplo = 20
+
+exemplo = "String de Exemplo"
+
+exemplo = 15.7
+
+puts exemplo
+```
+
+**Saída:**
+
+```text
+15.7
+```
+
+Nesse exemplo, a variável `exemplo` recebeu valores de tipos diferentes:
+
+```text
+20                  → Integer
+"String de Exemplo" → String
+15.7                → Float
+```
+
+O Ruby permite esse comportamento porque possui **tipagem dinâmica**.
+
+Isso significa que não precisamos declarar previamente o tipo da variável, e uma variável pode receber valores de tipos diferentes ao longo da execução.
+
+Embora seja permitido pela linguagem, alterar o tipo de uma variável sem necessidade pode **prejudicar a clareza e a manutenção do código**. Por isso, é uma boa prática utilizar variáveis de forma consistente.
+
+---
+
+## Resumo
+
+```text
+nome = "Felipe"
+```
+
+→ Cria uma variável chamada `nome` e armazena uma String.
+
+```text
+idade = 20
+```
+
+→ Cria uma variável chamada `idade` e armazena um Integer.
+
+```text
+nome_do_pais = "Brasil"
+```
+
+→ Exemplo de nome de variável utilizando `snake_case`.
+
+```text
+idade_em_dez_anos = idade + 10
+```
+
+→ É possível realizar operações utilizando variáveis.
+
+```text
+variavel = 20
+variavel = "Texto"
+```
+
+→ Ruby possui tipagem dinâmica e permite que uma variável receba valores de tipos diferentes.
+
+## Declarando várias variáveis na mesma linha
+
+É possível declarar várias variáveis em uma única linha.
+
+```ruby
+a, b, c = 10, 20, 30
+
+puts a, b, c
+```
+
+**Saída:**
+
+```text
+10
+20
+30
+```
+
+Nesse caso:
+
+```text
+a → 10
+b → 20
+c → 30
+```
+
+---
+
+## Trocando valores entre variáveis
+
+Em Ruby, é possível trocar os valores de duas variáveis de forma simples utilizando a atribuição múltipla.
+
+```ruby
+a = 1
+b = 2
+
+a, b = b, a
+
+puts a, b
+```
+
+**Saída:**
+
+```text
+2
+1
+```
+
+Nesse caso, os valores foram trocados:
+
+```text
+a → 2
+b → 1
+```
+
+### Atenção
+
+Fazer a troca desta forma não funciona:
+
+```ruby
+a = 1
+b = 2
+
+a = b
+b = a
+```
+
+Depois de `a = b`, o valor de `a` passa a ser `2`. Quando fazemos `b = a`, `b` também recebe `2`.
+
+**Resultado:**
+
+```text
+a → 2
+b → 2
+```
+
+Por isso, em Ruby podemos utilizar:
+
+```ruby
+a, b = b, a
+```
+
+---
+
+# Operadores de atribuição
+
+Ruby possui operadores de atribuição que permitem realizar uma operação e atribuir o resultado à própria variável.
+
+Esses operadores são semelhantes aos encontrados em outras linguagens.
+
+## `+=`
+
+Adiciona um valor à variável.
+
+```ruby
+a = 10
+
+a += 7
+
+puts a
+```
+
+**Saída:**
+
+```text
+17
+```
+
+É equivalente a:
+
+```ruby
+a = a + 7
+```
+
+---
+
+## `-=`
+
+Subtrai um valor da variável.
+
+```ruby
+b = 10
+
+b -= 7
+
+puts b
+```
+
+**Saída:**
+
+```text
+3
+```
+
+É equivalente a:
+
+```ruby
+b = b - 7
+```
+
+---
+
+## `*=`
+
+Multiplica o valor da variável.
+
+```ruby
+c = 10
+
+c *= 7
+
+puts c
+```
+
+**Saída:**
+
+```text
+70
+```
+
+É equivalente a:
+
+```ruby
+c = c * 7
+```
+
+---
+
+## Operadores de atribuição com Strings
+
+Também é possível utilizar `+=` com Strings para concatená-las.
+
+```ruby
+nome = "Felipe"
+
+nome += " Néspolo"
+
+puts nome
+```
+
+**Saída:**
+
+```text
+Felipe Néspolo
+```
+
+É equivalente a:
+
+```ruby
+nome = nome + " Néspolo"
+```
+
+---
+
+# Constantes
+
+Uma **constante** é utilizada para representar um valor que não deve ser alterado durante a execução do programa.
+
+Em Ruby, um identificador iniciado com uma **letra maiúscula** é tratado como uma constante.
+
+Por convenção, quando o nome possui mais de uma palavra, utiliza-se `MAIÚSCULAS_COM_UNDERSCORE`.
+
+### Exemplo
+
+```ruby
+PI = 3.14159
+```
+
+Por convenção, constantes normalmente são escritas em letras maiúsculas.
+
+Outro exemplo:
+
+```ruby
+NUMERO_MAXIMO = 100
+```
+
+### Alterando uma constante
+
+Podemos tentar alterar o valor de uma constante:
+
+```ruby
+PI = 3.14159
+
+PI = 3.14
+```
+
+O Ruby irá gerar um **warning**, informando que estamos tentando alterar uma constante que já recebeu um valor.
+
+Por isso, devemos utilizar constantes para valores que **não pretendemos alterar** durante a execução do programa.
+
+### Resumo
+
+```text
+variável    → pode ter seu valor alterado
+constante   → representa um valor que não deve ser alterado
+```
+
+Exemplo:
+
+```ruby
+idade = 20
+idade = 21
+```
+
+A variável `idade` pode receber um novo valor.
+
+Já:
+
+```ruby
+PI = 3.14159
+```
+
+é uma constante e não deve ser alterada.
