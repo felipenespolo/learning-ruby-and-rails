@@ -1125,13 +1125,13 @@ Nesse caso, `.inspect` produz uma representação semelhante à saída do métod
 .inspect → retorna uma representação do objeto
 ```
 
-**#** **Método nil**
+# **Método nil**
 
 O `nil` representa a **ausência de um valor** em Ruby.
 
 Quando utilizamos `puts nil`, nenhum conteúdo é exibido, mas o `puts` ainda realiza uma **quebra de linha**.
 
-**###** **Exemplo**
+### **Exemplo**
 
 ```ruby
 puts nil
@@ -1147,7 +1147,7 @@ puts nil
 
 ---
 
-**#** **Interpolação de Strings**
+# **Interpolação de Strings**
 
 A **interpolação de Strings** permite adicionar o valor de uma variável diretamente dentro de uma String.
 
@@ -1157,7 +1157,7 @@ Para isso, utilizamos:
 #{variavel}
 ```
 
-**###** **Exemplo**
+### **Exemplo**
 
 ```ruby
 nome = "Felipe"
@@ -1173,7 +1173,7 @@ Olá Felipe, bem-vindo!
 
 A interpolação também funciona com números.
 
-**###** **Exemplo**
+### **Exemplo**
 
 ```ruby
 idade = 20
@@ -1189,7 +1189,7 @@ Eu tenho 20 anos
 
 Também é possível realizar operações dentro da interpolação.
 
-**###** **Exemplo**
+### **Exemplo**
 
 ```ruby
 idade = 20
@@ -1205,10 +1205,11 @@ Em 5 anos eu terei 25 anos
 
 Também podemos utilizar várias variáveis na mesma String.
 
-**###** **Exemplo**
+### **Exemplo**
 
 ```ruby
 x = 5
+
 y = 7
 
 puts "A soma entre #{x} e #{y} é #{x + y}"
@@ -1224,11 +1225,11 @@ A soma entre 5 e 7 é 12
 
 ---
 
-**#** **Método gets**
+# **Método gets**
 
 O método `gets` é utilizado para **receber dados digitados pelo usuário através do terminal**.
 
-**###** **Exemplo**
+### **Exemplo**
 
 ```ruby
 nome = gets
@@ -1253,11 +1254,11 @@ Isso acontece porque o `gets` também captura a **quebra de linha (`\n`)** gerad
 
 ---
 
-**#** **Método chomp**
+# **Método chomp**
 
 Para remover a quebra de linha capturada pelo `gets`, podemos utilizar o método `.chomp`.
 
-**###** **Exemplo**
+### **Exemplo**
 
 ```ruby
 nome = gets.chomp
@@ -1281,17 +1282,17 @@ O `.chomp` remove a quebra de linha (`\n`) capturada pelo `gets`.
 
 ---
 
-**#** **Conversão de Valores**
+# **Conversão de Valores**
 
 Por padrão, o `gets.chomp` retorna os dados recebidos como uma **String**.
 
 Para receber outros tipos de dados, podemos utilizar métodos de conversão.
 
-**##** **Inteiro — `.to_i`**
+## **Inteiro — `.to_i`**
 
 Para converter o valor recebido para um **Integer**, utilizamos `.to_i`.
 
-**###** **Exemplo**
+### **Exemplo**
 
 ```ruby
 idade = gets.chomp.to_i
@@ -1313,11 +1314,11 @@ Sua idade é 20
 
 ---
 
-**##** **Float — `.to_f`**
+## **Float — `.to_f`**
 
 Para converter o valor recebido para um **Float**, utilizamos `.to_f`.
 
-**###** **Exemplo**
+### **Exemplo**
 
 ```ruby
 pi = gets.chomp.to_f
@@ -1339,13 +1340,18 @@ O valor de pi é 3.14159
 
 ---
 
-**#** **Resumo**
+# **Resumo**
 
 ```text
 nil       → representa a ausência de um valor
+
 gets      → recebe dados do usuário
+
 .chomp    → remove a quebra de linha (\n)
+
 .to_i     → converte o valor para Integer
+
 .to_f     → converte o valor para Float
+
 #{...}    → realiza interpolação de Strings
 ```
