@@ -914,3 +914,438 @@ PI = 3.14159
 ```
 
 é uma constante e não deve ser alterada.
+
+# Métodos
+
+Métodos são ações que podem ser executadas sobre um objeto.
+
+Para chamar um método, normalmente utilizamos um ponto (`.`) seguido do nome do método após o objeto.
+
+### Exemplo
+
+```ruby
+puts "exemplo".upcase
+```
+
+**Saída:**
+
+```text
+EXEMPLO
+```
+
+O método `upcase` transforma todas as letras da String em **letras maiúsculas**.
+
+---
+
+## Métodos para Strings
+
+### `.length`
+
+O método `.length` mostra a **quantidade de caracteres** de uma String.
+
+```ruby
+puts "Felipe".length
+```
+
+**Saída:**
+
+```text
+6
+```
+
+---
+
+### `.upcase`
+
+O método `.upcase` transforma todas as letras da String em **letras maiúsculas**.
+
+```ruby
+puts "Felipe".upcase
+```
+
+**Saída:**
+
+```text
+FELIPE
+```
+
+---
+
+### `.downcase`
+
+O método `.downcase` transforma todas as letras da String em **letras minúsculas**.
+
+```ruby
+puts "Felipe".downcase
+```
+
+**Saída:**
+
+```text
+felipe
+```
+
+Os métodos também podem ser utilizados em variáveis.
+
+### Exemplo
+
+```ruby
+nome = "Felipe"
+
+puts nome.downcase
+```
+
+**Saída:**
+
+```text
+felipe
+```
+
+---
+
+# Métodos para Inteiros
+
+## `.next`
+
+O método `.next` retorna o **próximo número inteiro**.
+
+```ruby
+puts 10.next
+```
+
+**Saída:**
+
+```text
+11
+```
+
+---
+
+## `.succ`
+
+O método `.succ` também retorna o **próximo número inteiro**.
+
+```ruby
+puts -1.succ
+```
+
+**Saída:**
+
+```text
+0
+```
+
+`.succ` possui o mesmo resultado que `.next` para números inteiros.
+
+```ruby
+puts 10.next
+puts 10.succ
+```
+
+**Saída:**
+
+```text
+11
+11
+```
+
+---
+
+## `.pred`
+
+O método `.pred` retorna o **número inteiro anterior**.
+
+```ruby
+puts 10.pred
+```
+
+**Saída:**
+
+```text
+9
+```
+
+---
+
+# Método `.inspect`
+
+O método `.inspect` retorna uma **representação do objeto**, mostrando detalhes de como o objeto é representado pelo Ruby.
+
+Para Strings, ele mostra as aspas e representa caracteres especiais, como `\n`, de forma explícita.
+
+### Exemplo com `p`
+
+```ruby
+p "Hello World\n"
+```
+
+**Saída:**
+
+```text
+"Hello World\n"
+```
+
+### Exemplo com `.inspect`
+
+```ruby
+puts "Hello World\n".inspect
+```
+
+**Saída:**
+
+```text
+"Hello World\n"
+```
+
+Nesse caso, `.inspect` produz uma representação semelhante à saída do método `p`.
+
+---
+
+## Resumo
+
+### Strings
+
+```text
+.length   → mostra a quantidade de caracteres
+.upcase   → transforma as letras em maiúsculas
+.downcase → transforma as letras em minúsculas
+```
+
+### Inteiros
+
+```text
+.next → retorna o próximo número
+.succ → retorna o próximo número
+.pred → retorna o número anterior
+```
+
+### Outros
+
+```text
+.inspect → retorna uma representação do objeto
+```
+
+**#** **Método nil**
+
+O `nil` representa a **ausência de um valor** em Ruby.
+
+Quando utilizamos `puts nil`, nenhum conteúdo é exibido, mas o `puts` ainda realiza uma **quebra de linha**.
+
+**###** **Exemplo**
+
+```ruby
+puts nil
+```
+
+**Saída:**
+
+```text
+
+```
+
+> `nil` não é uma String vazia (`""`). São valores diferentes.
+
+---
+
+**#** **Interpolação de Strings**
+
+A **interpolação de Strings** permite adicionar o valor de uma variável diretamente dentro de uma String.
+
+Para isso, utilizamos:
+
+```ruby
+#{variavel}
+```
+
+**###** **Exemplo**
+
+```ruby
+nome = "Felipe"
+
+puts "Olá #{nome}, bem-vindo!"
+```
+
+**Saída:**
+
+```text
+Olá Felipe, bem-vindo!
+```
+
+A interpolação também funciona com números.
+
+**###** **Exemplo**
+
+```ruby
+idade = 20
+
+puts "Eu tenho #{idade} anos"
+```
+
+**Saída:**
+
+```text
+Eu tenho 20 anos
+```
+
+Também é possível realizar operações dentro da interpolação.
+
+**###** **Exemplo**
+
+```ruby
+idade = 20
+
+puts "Em 5 anos eu terei #{idade + 5} anos"
+```
+
+**Saída:**
+
+```text
+Em 5 anos eu terei 25 anos
+```
+
+Também podemos utilizar várias variáveis na mesma String.
+
+**###** **Exemplo**
+
+```ruby
+x = 5
+y = 7
+
+puts "A soma entre #{x} e #{y} é #{x + y}"
+```
+
+**Saída:**
+
+```text
+A soma entre 5 e 7 é 12
+```
+
+> A interpolação é utilizada normalmente em Strings delimitadas por **aspas duplas** (`"`).
+
+---
+
+**#** **Método gets**
+
+O método `gets` é utilizado para **receber dados digitados pelo usuário através do terminal**.
+
+**###** **Exemplo**
+
+```ruby
+nome = gets
+
+puts "Olá #{nome}, bem-vindo!"
+```
+
+Se o usuário digitar:
+
+```text
+Felipe
+```
+
+A saída será:
+
+```text
+Olá Felipe
+, bem-vindo!
+```
+
+Isso acontece porque o `gets` também captura a **quebra de linha (`\n`)** gerada quando o usuário pressiona `Enter`.
+
+---
+
+**#** **Método chomp**
+
+Para remover a quebra de linha capturada pelo `gets`, podemos utilizar o método `.chomp`.
+
+**###** **Exemplo**
+
+```ruby
+nome = gets.chomp
+
+puts "Olá #{nome}, bem-vindo!"
+```
+
+Se o usuário digitar:
+
+```text
+Felipe
+```
+
+**Saída:**
+
+```text
+Olá Felipe, bem-vindo!
+```
+
+O `.chomp` remove a quebra de linha (`\n`) capturada pelo `gets`.
+
+---
+
+**#** **Conversão de Valores**
+
+Por padrão, o `gets.chomp` retorna os dados recebidos como uma **String**.
+
+Para receber outros tipos de dados, podemos utilizar métodos de conversão.
+
+**##** **Inteiro — `.to_i`**
+
+Para converter o valor recebido para um **Integer**, utilizamos `.to_i`.
+
+**###** **Exemplo**
+
+```ruby
+idade = gets.chomp.to_i
+
+puts "Sua idade é #{idade}"
+```
+
+Se o usuário digitar:
+
+```text
+20
+```
+
+**Saída:**
+
+```text
+Sua idade é 20
+```
+
+---
+
+**##** **Float — `.to_f`**
+
+Para converter o valor recebido para um **Float**, utilizamos `.to_f`.
+
+**###** **Exemplo**
+
+```ruby
+pi = gets.chomp.to_f
+
+puts "O valor de pi é #{pi}"
+```
+
+Se o usuário digitar:
+
+```text
+3.14159
+```
+
+**Saída:**
+
+```text
+O valor de pi é 3.14159
+```
+
+---
+
+**#** **Resumo**
+
+```text
+nil       → representa a ausência de um valor
+gets      → recebe dados do usuário
+.chomp    → remove a quebra de linha (\n)
+.to_i     → converte o valor para Integer
+.to_f     → converte o valor para Float
+#{...}    → realiza interpolação de Strings
+```
