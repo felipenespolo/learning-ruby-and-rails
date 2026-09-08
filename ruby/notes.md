@@ -1355,3 +1355,67 @@ gets      → recebe dados do usuário
 
 #{...}    → realiza interpolação de Strings
 ```
+# Booleans
+
+Um valor **Boolean** representa apenas dois estados possíveis: `true` (verdadeiro) ou `false` (falso).
+
+---
+
+## Operador de igualdade `==`
+
+O operador de igualdade segue a mesma ideia de outras linguagens, sendo representado por `==`.
+
+Ele verifica se dois valores são **iguais**, retornando `true` ou `false`.
+
+### Exemplo
+
+```ruby
+puts 7 == 7
+```
+
+**Saída:**
+
+```text
+true
+```
+
+---
+
+## Operador de não igualdade `!=`
+
+O operador de não igualdade também segue o mesmo padrão de outras linguagens, sendo representado por `!=`.
+
+Ele verifica se dois valores são **diferentes**, retornando `true` ou `false`.
+
+### Exemplo
+
+```ruby
+puts 10 != 5
+```
+
+**Saída:**
+
+```text
+true
+```
+
+Outro exemplo:
+
+```ruby
+puts 10 != 10
+```
+
+**Saída:**
+
+```text
+false
+```
+
+---
+
+## Resumo
+
+```text
+==  → verifica se dois valores são iguais
+!=  → verifica se dois valores são diferentes
+```
