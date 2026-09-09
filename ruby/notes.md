@@ -1419,3 +1419,170 @@ false
 ==  → verifica se dois valores são iguais
 !=  → verifica se dois valores são diferentes
 ```
+
+# Comparadores Matemáticos
+
+Os comparadores matemáticos em Ruby seguem o mesmo padrão de outras linguagens.
+
+| Operador | Função |
+|---|---|
+| `>` | Maior |
+| `<` | Menor |
+| `>=` | Maior ou igual |
+| `<=` | Menor ou igual |
+
+### Maior
+
+```ruby
+puts 5 > 7
+```
+
+**Saída:**
+
+```text
+false
+```
+
+### Menor
+
+```ruby
+puts 7 < 5
+```
+
+**Saída:**
+
+```text
+false
+```
+
+### Menor ou igual
+
+```ruby
+puts 7 <= 7
+```
+
+**Saída:**
+
+```text
+true
+```
+
+### Maior ou igual
+
+```ruby
+puts 7 >= 7
+```
+
+**Saída:**
+
+```text
+true
+```
+
+### Resumo
+
+```text
+>   → maior
+<   → menor
+>=  → maior ou igual
+<=  → menor ou igual
+```
+
+---
+
+# Método Predicate
+
+Um método **predicate** é utilizado da seguinte forma:
+
+```text
+objeto.metodo?
+```
+
+Sendo necessário utilizar a interrogação (`?`) ao final do nome do método.
+
+### `.odd?`
+
+Verifica se o número é **ímpar**.
+
+```ruby
+puts 10.odd?
+```
+
+**Saída:**
+
+```text
+false
+```
+
+### `.even?`
+
+Verifica se o número é **par**.
+
+```ruby
+puts 10.even?
+```
+
+**Saída:**
+
+```text
+true
+```
+
+### `.positive?`
+
+Verifica se o número é **positivo**.
+
+```ruby
+puts 10.positive?
+```
+
+**Saída:**
+
+```text
+true
+```
+
+### `.negative?`
+
+Verifica se o número é **negativo**.
+
+```ruby
+puts 10.negative?
+```
+
+**Saída:**
+
+```text
+false
+```
+
+### Exemplo com número negativo
+
+```ruby
+puts -8.positive?
+```
+
+**Saída:**
+
+```text
+false
+```
+
+```ruby
+puts -8.negative?
+```
+
+**Saída:**
+
+```text
+true
+```
+
+### Resumo
+
+```text
+.odd?      → verifica se o número é ímpar
+.even?     → verifica se o número é par
+.positive? → verifica se o número é positivo
+.negative? → verifica se o
+
